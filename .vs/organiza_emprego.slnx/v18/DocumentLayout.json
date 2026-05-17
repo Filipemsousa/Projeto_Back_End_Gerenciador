@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\controllers\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\models\\candidatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\models\\candidatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\organiza_emprego.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\organiza_emprego.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\cursos\\ford enter\\back_end\\projeto_backend\\organiza_emprego\\organiza_emprego\\migrations\\20260515195632_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\migrations\\20260515195632_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "organiza_emprego\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAQwFkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T20:11:31.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CandidaturasController.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "RelativeToolTip": "organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:31:25.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:32:25.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioCadastroDto.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "RelativeToolTip": "organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T20:17:03.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Program.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Program.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Program.cs",
+              "RelativeToolTip": "organiza_emprego\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T18:42:16.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Models\\Usuario.cs",
+              "RelativeToolTip": "organiza_emprego\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:28:47.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260517212528_TabelaUsuarios.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "RelativeToolTip": "organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T21:25:30.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioLoginDto.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "RelativeToolTip": "organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:55:59.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Candidatura.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Models\\Candidatura.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Models\\Candidatura.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Models\\Candidatura.cs",
+              "RelativeToolTip": "organiza_emprego\\Models\\Candidatura.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:02:42.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "organiza_emprego\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:09:21.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20260515195632_Inicial.cs",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Migrations\\20260515195632_Inicial.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260515195632_Inicial.cs",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\Migrations\\20260515195632_Inicial.cs",
+              "RelativeToolTip": "organiza_emprego\\Migrations\\20260515195632_Inicial.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:56:36.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\appsettings.json",
+              "RelativeDocumentMoniker": "organiza_emprego\\appsettings.json",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\appsettings.json",
+              "RelativeToolTip": "organiza_emprego\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-15T19:15:02.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "organiza_emprego.csproj",
+              "DocumentMoniker": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\organiza_emprego.csproj",
+              "RelativeDocumentMoniker": "organiza_emprego\\organiza_emprego.csproj",
+              "ToolTip": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\organiza_emprego.csproj",
+              "RelativeToolTip": "organiza_emprego\\organiza_emprego.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-15T19:59:27.202Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

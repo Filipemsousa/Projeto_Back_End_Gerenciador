@@ -1,0 +1,138 @@
+[
+  {
+    "ContainingType": "organiza_emprego.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "organiza_emprego.DTOs.UsuarioLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "organiza_emprego.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "organiza_emprego.Controllers.UsuarioCadastroDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
+    "Method": "GetCandidaturas",
+    "RelativePath": "api/Candidaturas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "vaga",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dataInicio",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "dataFim",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[organiza_emprego.Models.Candidatura, organiza_emprego, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
+    "Method": "PostCandidatura",
+    "RelativePath": "api/Candidaturas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidatura",
+        "Type": "organiza_emprego.Models.Candidatura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "organiza_emprego.Models.Candidatura",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
+    "Method": "PutCandidatura",
+    "RelativePath": "api/Candidaturas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "candidatura",
+        "Type": "organiza_emprego.Models.Candidatura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
+    "Method": "DeleteCandidatura",
+    "RelativePath": "api/Candidaturas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
