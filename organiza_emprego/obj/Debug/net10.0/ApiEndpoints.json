@@ -100,6 +100,27 @@
   },
   {
     "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
+    "Method": "DeleteCandidaturasByFiltro",
+    "RelativePath": "api/Candidaturas",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "vaga",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
     "Method": "PutCandidatura",
     "RelativePath": "api/Candidaturas/{id}",
     "HttpMethod": "PUT",
@@ -114,22 +135,6 @@
       {
         "Name": "candidatura",
         "Type": "organiza_emprego.Models.Candidatura",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
-    "Method": "DeleteCandidatura",
-    "RelativePath": "api/Candidaturas/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

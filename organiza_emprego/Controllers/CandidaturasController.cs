@@ -132,30 +132,51 @@ namespace organiza_emprego.Controllers
 
 
 
-        // DELETE: api/Candidaturas/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCandidatura(int id)
+        // DELETE: api/Candidaturas
+        // Exemplos de uso: api/Candidaturas?empresa=Google  OU  api/Candidaturas?vaga=Front-End
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCandidaturasByFiltro([FromQuery] string? empresa, [FromQuery] string? vaga)
         {
-            // 1. Extrai o ID do usuário logado através do Token JWT
+            // 1. Validação inicial: O usuário precisa enviar pelo menos um dos filtros
+            if (string.IsNullOrEmpty(empresa) && string.IsNullOrEmpty(vaga))
+            {
+                return BadRequest("Você precisa informar pelo menos o nome da empresa ou o nome da vaga para deletar.");
+            }
+
+            // 2. Extrai o ID do usuário logado através do Token JWT (Garantia de segurança)
             var usuarioIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(usuarioIdClaim)) return Unauthorized("Usuário não identificado.");
             int usuarioId = int.Parse(usuarioIdClaim);
 
-            // 2. Busca a candidatura no banco de dados
-            var candidatura = await _context.Candidaturas.FindAsync(id);
-            if (candidatura == null) return NotFound("Candidatura não encontrada.");
+            // 3. Começa a query filtrando APENAS pelas vagas que pertencem a este usuário
+            var query = _context.Candidaturas.Where(c => c.UsuarioId == usuarioId);
 
-            // 🔒 3. Bloqueio de segurança: Verifica se o usuário logado é realmente o dono do registro
-            if (candidatura.UsuarioId != usuarioId)
+            // 4. Aplica os filtros de deleção solicitados
+            if (!string.IsNullOrEmpty(empresa))
             {
-                return Forbid("Você não tem permissão para deletar esta candidatura.");
+                query = query.Where(c => c.Empresa == empresa); // Usa '==' para deletar o nome exato
             }
 
-            // 4. Se passou pela validação, remove do banco
-            _context.Candidaturas.Remove(candidatura);
+            if (!string.IsNullOrEmpty(vaga))
+            {
+                query = query.Where(c => c.Vaga == vaga);
+            }
+
+            // 5. Busca a lista de candidaturas que serão apagadas
+            var candidaturasParaDeletar = await query.ToListAsync();
+
+            // 6. Se não encontrar nenhuma, avisa o usuário
+            if (candidaturasParaDeletar.Count == 0)
+            {
+                return NotFound("Nenhuma candidatura correspondente foi encontrada para exclusão.");
+            }
+
+            // 7. Remove todas as vagas encontradas do banco de dados de uma só vez
+            _context.Candidaturas.RemoveRange(candidaturasParaDeletar);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            // Retorna uma mensagem de sucesso dizendo quantas foram apagadas
+            return Ok(new { mensagem = $"{candidaturasParaDeletar.Count} candidatura(s) removida(s) com sucesso!" });
         }
 
     }
