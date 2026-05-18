@@ -2507,23 +2507,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\menez\\.nuget\\packages\\": {},
+    "C:\\Users\\025.030174\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\organiza_emprego.csproj",
+      "projectUniqueName": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\organiza_emprego.csproj",
       "projectName": "organiza_emprego",
-      "projectPath": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\organiza_emprego.csproj",
-      "packagesPath": "C:\\Users\\menez\\.nuget\\packages\\",
-      "outputPath": "C:\\Cursos\\Ford Enter\\Back_End\\Projeto_backend\\organiza_emprego\\organiza_emprego\\obj\\",
+      "projectPath": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\organiza_emprego.csproj",
+      "packagesPath": "C:\\Users\\025.030174\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\menez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\025.030174\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -253,6 +253,7 @@
         "required": [
           "empresa",
           "status",
+          "usuarioId",
           "vaga"
         ],
         "type": "object",
@@ -284,6 +285,10 @@
           "observacoes": {
             "type": "string",
             "nullable": true
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

@@ -21,5 +21,14 @@ namespace organiza_emprego.Models
         public string Status { get; set; } = "Aplicado";
 
         public string? Observacoes { get; set; }
+
+
+
+        // Relacionamento com o Usuário
+        [Required]
+        public int UsuarioId { get; set; }
+
+        [System.Text.Json.Serialization.JsonIgnore] // Evita loops no JSON
+        public Usuario? Usuario { get; set; }
     }
 }
