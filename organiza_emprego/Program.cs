@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using organiza_emprego.Data;
+using organiza_emprego.Services;
+using organiza_emprego.Services.Interfaces;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -73,7 +75,7 @@ if (!string.IsNullOrEmpty(jwtKey))
 
 
 
-
+builder.Services.AddScoped<ICandidaturaService, CandidaturaService>();
 
 builder.Services.AddOpenApi();
 
@@ -86,6 +88,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

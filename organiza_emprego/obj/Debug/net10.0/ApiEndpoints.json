@@ -33,7 +33,7 @@
   },
   {
     "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
-    "Method": "GetCandidaturas",
+    "Method": "Get",
     "RelativePath": "api/Candidaturas",
     "HttpMethod": "GET",
     "IsController": true,
@@ -60,21 +60,11 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[organiza_emprego.Models.Candidatura, organiza_emprego, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
-    "Method": "PostCandidatura",
+    "Method": "Post",
     "RelativePath": "api/Candidaturas",
     "HttpMethod": "POST",
     "IsController": true,
@@ -86,21 +76,11 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "organiza_emprego.Models.Candidatura",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
-    "Method": "DeleteCandidaturasByFiltro",
+    "Method": "Delete",
     "RelativePath": "api/Candidaturas",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -121,7 +101,7 @@
   },
   {
     "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
-    "Method": "PutCandidatura",
+    "Method": "Put",
     "RelativePath": "api/Candidaturas/{id}",
     "HttpMethod": "PUT",
     "IsController": true,

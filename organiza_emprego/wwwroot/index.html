@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Minhas Vagas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="view-dashboard">
+        <header class="main-header">
+            <h1>Astronomy & Tech Jobs</h1>
+            <div class="user-menu">
+                <span id="user-greeting">Olá, Usuário</span>
+                <button id="btn-logout" class="btn-danger">Sair / Logout</button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <!-- Formulário -->
+            <section class="card form-vaga-card">
+                <h3>Nova Candidatura</h3>
+                <form id="form-vaga">
+                    <div class="form-group">
+                        <label>Empresa</label>
+                        <input type="text" id="vaga-empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Vaga</label>
+                        <input type="text" id="vaga-nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Link da Vaga</label>
+                        <input type="url" id="vaga-link">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="vaga-status">
+                            <option value="Aplicado">Aplicado</option>
+                            <option value="Entrevista">Entrevista</option>
+                            <option value="Teste Técnico">Teste Técnico</option>
+                            <option value="Aprovado">Aprovado</option>
+                            <option value="Recusado">Recusado</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-success">Salvar Candidatura</button>
+                </form>
+            </section>
+
+            <!-- Tabela -->
+            <section class="card lista-vagas-card">
+                <h3>Minhas Candidaturas</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Empresa</th>
+                                <th>Vaga</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vagas-table-body"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>const API_URL = "http://localhost:5000/api";
+        const token = localStorage.getItem("token");
+        const nome = localStorage.getItem("usuario_nome");
+
+        // ⚠️ SEGURANÇA: Se não estiver logado, impede de ver o painel
+        if (!token) {
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("user-greeting").innerText = `Olá, ${nome}`;
+            carregarCandidaturas();
+        }
+
+        document.getElementById("btn-logout").addEventListener("click", () => {
+            localStorage.clear();
+            window.location.href = "login.html"; // Manda de volta pro login ao deslogar
+        });
+
+        async function carregarCandidaturas() {
+            const tableBody = document.getElementById("vagas-table-body");
+            try {
+                const response = await fetch(`${API_URL}/Candidaturas`, {
+                    method: "GET",
+                    headers: { "Authorization": `Bearer ${token}` }
+                });
+
+                if (response.ok) {
+                    const candidaturas = await response.json();
+                    tableBody.innerHTML = candidaturas.length === 0
+                        ? "<tr><td colspan='5'>Nenhuma vaga cadastrada.</td></tr>"
+                        : "";
+
+                    candidaturas.forEach(c => {
+                        const dataFormatada = new Date(c.dataCandidatura).toLocaleDateString('pt-BR');
+                        tableBody.innerHTML += `
+                            <tr>
+                                <td><strong>${c.empresa}</strong></td>
+                                <td>${c.vaga}</td>
+                                <td>${dataFormatada}</td>
+                                <td>${c.status}</td>
+                                <td>${c.linkVaga ? `<a href="${c.linkVaga}" target="_blank">Acessar</a>` : 'Não informado'}</td>
+                            </tr>`;
+                    });
+                } else if (response.status === 401) {
+                    localStorage.clear();
+                    window.location.href = "login.html";
+                }
+            } catch (error) {
+                tableBody.innerHTML = "<tr><td colspan='5'>Erro ao carregar dados.</td></tr>";
+            }
+        }
+
+        document.getElementById("form-vaga").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const payload = {
+                empresa: document.getElementById("vaga-empresa").value,
+                vaga: document.getElementById("vaga-nome").value,
+                linkVaga: document.getElementById("vaga-link").value,
+                status: document.getElementById("vaga-status").value
+            };
+
+            try {
+                const response = await fetch(`${API_URL}/Candidaturas`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    document.getElementById("form-vaga").reset();
+                    carregarCandidaturas();
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        });</script>
+</body>
+
+
+</html>

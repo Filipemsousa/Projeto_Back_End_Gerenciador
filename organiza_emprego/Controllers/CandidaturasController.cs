@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using organiza_emprego.Data;
 using organiza_emprego.Models;
-using System.Security.Claims;
+using organiza_emprego.Services.Interfaces;
 
 namespace organiza_emprego.Controllers
 {
@@ -12,172 +11,59 @@ namespace organiza_emprego.Controllers
     [Authorize]
     public class CandidaturasController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ICandidaturaService _candidaturaService;
 
-        public CandidaturasController(AppDbContext context)
+        public CandidaturasController(ICandidaturaService candidaturaService)
         {
-            _context = context;
+            _candidaturaService = candidaturaService; // Injeta apenas o Service aqui
         }
 
-        // GET: api/Candidaturas (Listar apenas as candidaturas do usuário logado)
+        // Método auxiliar para ler o ID do Token de forma limpa
+        private int GetUsuarioIdLogado()
+        {
+            var claim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            return string.IsNullOrEmpty(claim) ? 0 : int.Parse(claim);
+        }
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Candidatura>>> GetCandidaturas(
-            [FromQuery] string? empresa,
-            [FromQuery] string? vaga,
-            [FromQuery] DateTime? dataInicio,
-            [FromQuery] DateTime? dataFim)
+        public async Task<IActionResult> Get([FromQuery] string? empresa, [FromQuery] string? vaga, [FromQuery] DateTime? dataInicio, [FromQuery] DateTime? dataFim)
         {
-            // 1. Extrai o ID do usuário que está dentro do Token JWT recebido
-            var usuarioIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(usuarioIdClaim)) return Unauthorized("Usuário não identificado.");
-
-            int usuarioId = int.Parse(usuarioIdClaim);
-
-            // 2. Filtra a query inicial para trazer APENAS as vagas onde o UsuarioId seja igual ao do token
-            var query = _context.Candidaturas.Where(c => c.UsuarioId == usuarioId);
-
-            // 3. Aplica os outros filtros de pesquisa normalmente por cima do filtro do usuário
-            if (!string.IsNullOrEmpty(empresa))
-            {
-                query = query.Where(c => c.Empresa.Contains(empresa));
-            }
-
-            if (!string.IsNullOrEmpty(vaga))
-            {
-                query = query.Where(c => c.Vaga.Contains(vaga));
-            }
-
-            if (dataInicio.HasValue)
-            {
-                query = query.Where(c => c.DataCandidatura >= dataInicio.Value);
-            }
-
-            if (dataFim.HasValue)
-            {
-                var dataLimite = dataFim.Value.Date.AddDays(1).AddTicks(-1);
-                query = query.Where(c => c.DataCandidatura <= dataLimite);
-            }
-
-            return await query.ToListAsync();
+            int usuarioId = GetUsuarioIdLogado();
+            var resultados = await _candidaturaService.ListarPorUsuarioAsync(usuarioId, empresa, vaga, dataInicio, dataFim);
+            return Ok(resultados);
         }
 
-        // POST: api/Candidaturas (Vincular a nova vaga automaticamente ao usuário logado)
         [HttpPost]
-        public async Task<ActionResult<Candidatura>> PostCandidatura(Candidatura candidatura)
+        public async Task<IActionResult> Post([FromBody] Candidatura candidatura)
         {
-            // 1. Extrai o ID do usuário logado através do Token
-            var usuarioIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(usuarioIdClaim)) return Unauthorized("Usuário não identificado.");
-
-            // 2. Associa a candidatura ao usuário antes de salvar no banco
-            candidatura.UsuarioId = int.Parse(usuarioIdClaim);
-
-            _context.Candidaturas.Add(candidatura);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetCandidaturas", new { id = candidatura.Id }, candidatura);
+            int usuarioId = GetUsuarioIdLogado();
+            var novaCandidatura = await _candidaturaService.CriarAsync(candidatura, usuarioId);
+            return CreatedAtAction(nameof(Get), new { id = novaCandidatura.Id }, novaCandidatura);
         }
 
-        // DICA: Você deve aplicar a mesma verificação nos métodos PUT e DELETE 
-        // para garantir que o usuário não mude ou delete o ID de uma vaga que pertence a outro!
-
-
-
-
-
-
-        // PUT: api/Candidaturas/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCandidatura(int id, Candidatura candidatura)
+        public async Task<IActionResult> Put(int id, [FromBody] Candidatura candidatura)
         {
             if (id != candidatura.Id) return BadRequest("O ID informado não coincide.");
 
-            // 1. Extrai o ID do usuário logado através do Token JWT
-            var usuarioIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(usuarioIdClaim)) return Unauthorized("Usuário não identificado.");
-            int usuarioId = int.Parse(usuarioIdClaim);
+            int usuarioId = GetUsuarioIdLogado();
+            bool atualizou = await _candidaturaService.AtualizarAsync(id, candidatura, usuarioId);
 
-            // 2. Busca a candidatura original direto no banco (sem rastrear) para verificar o verdadeiro dono
-            var candidaturaBanco = await _context.Candidaturas
-                .AsNoTracking()
-                .FirstOrDefaultAsync(c => c.Id == id);
-
-            if (candidaturaBanco == null) return NotFound("Candidatura não encontrada.");
-
-            // 🔒 3. Bloqueio de segurança: Se o UsuarioId do banco for diferente do Token, barra a operação
-            if (candidaturaBanco.UsuarioId != usuarioId)
-            {
-                return Forbid("Você não tem permissão para alterar esta candidatura.");
-            }
-
-            // 4. Garante que o ID do usuário não seja alterado na requisição
-            candidatura.UsuarioId = usuarioId;
-
-            _context.Entry(candidatura).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_context.Candidaturas.Any(e => e.Id == id)) return NotFound();
-                throw;
-            }
-
+            if (!atualizou) return Forbid("Operação negada ou registro inexistente.");
             return NoContent();
         }
 
-
-
-
-
-        // DELETE: api/Candidaturas
-        // Exemplos de uso: api/Candidaturas?empresa=Google  OU  api/Candidaturas?vaga=Front-End
         [HttpDelete]
-        public async Task<IActionResult> DeleteCandidaturasByFiltro([FromQuery] string? empresa, [FromQuery] string? vaga)
+        public async Task<IActionResult> Delete([FromQuery] string? empresa, [FromQuery] string? vaga)
         {
-            // 1. Validação inicial: O usuário precisa enviar pelo menos um dos filtros
             if (string.IsNullOrEmpty(empresa) && string.IsNullOrEmpty(vaga))
-            {
-                return BadRequest("Você precisa informar pelo menos o nome da empresa ou o nome da vaga para deletar.");
-            }
+                return BadRequest("Informe pelo menos a empresa ou a vaga.");
 
-            // 2. Extrai o ID do usuário logado através do Token JWT (Garantia de segurança)
-            var usuarioIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(usuarioIdClaim)) return Unauthorized("Usuário não identificado.");
-            int usuarioId = int.Parse(usuarioIdClaim);
+            int usuarioId = GetUsuarioIdLogado();
+            int totalDeletado = await _candidaturaService.DeletarPorFiltroAsync(empresa, vaga, usuarioId);
 
-            // 3. Começa a query filtrando APENAS pelas vagas que pertencem a este usuário
-            var query = _context.Candidaturas.Where(c => c.UsuarioId == usuarioId);
-
-            // 4. Aplica os filtros de deleção solicitados
-            if (!string.IsNullOrEmpty(empresa))
-            {
-                query = query.Where(c => c.Empresa == empresa); // Usa '==' para deletar o nome exato
-            }
-
-            if (!string.IsNullOrEmpty(vaga))
-            {
-                query = query.Where(c => c.Vaga == vaga);
-            }
-
-            // 5. Busca a lista de candidaturas que serão apagadas
-            var candidaturasParaDeletar = await query.ToListAsync();
-
-            // 6. Se não encontrar nenhuma, avisa o usuário
-            if (candidaturasParaDeletar.Count == 0)
-            {
-                return NotFound("Nenhuma candidatura correspondente foi encontrada para exclusão.");
-            }
-
-            // 7. Remove todas as vagas encontradas do banco de dados de uma só vez
-            _context.Candidaturas.RemoveRange(candidaturasParaDeletar);
-            await _context.SaveChangesAsync();
-
-            // Retorna uma mensagem de sucesso dizendo quantas foram apagadas
-            return Ok(new { mensagem = $"{candidaturasParaDeletar.Count} candidatura(s) removida(s) com sucesso!" });
+            if (totalDeletado == 0) return NotFound("Nenhuma candidatura correspondente foi encontrada.");
+            return Ok(new { mensagem = $"{totalDeletado} candidatura(s) removida(s) com sucesso!" });
         }
-
     }
 }

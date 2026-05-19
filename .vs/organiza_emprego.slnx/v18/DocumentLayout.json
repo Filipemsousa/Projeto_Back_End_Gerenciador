@@ -3,16 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\controllers\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\cadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\cadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\js\\cadastro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\js\\cadastro.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\organiza_emprego.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\organiza_emprego.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\services\\candidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\services\\candidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\services\\icandidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\services\\icandidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\controllers\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\usuariocadastrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,16 +79,8 @@
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\organiza_emprego.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\organiza_emprego.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\migrations\\20260515195632_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,151 +111,106 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CandidaturasController.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\CandidaturasController.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\CandidaturasController.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\CandidaturasController.cs",
-              "RelativeToolTip": "organiza_emprego\\Controllers\\CandidaturasController.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAcwLcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T19:31:25.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Candidatura.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Candidatura.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Models\\Candidatura.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Candidatura.cs",
-              "RelativeToolTip": "organiza_emprego\\Models\\Candidatura.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T19:02:42.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20260518112052_MigracaoCimatec.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
-              "RelativeToolTip": "organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:20:52.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Program.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
-              "RelativeToolTip": "organiza_emprego\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:42:16.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Usuario.cs",
-              "RelativeToolTip": "organiza_emprego\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T19:28:47.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "20260517212528_TabelaUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
-              "RelativeToolTip": "organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T21:25:30.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
-              "RelativeToolTip": "organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T19:55:59.098Z",
+              "Title": "login.html",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\login.html",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\login.html",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\login.html",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\login.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-05-19T14:51:07.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UsuarioDTO.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioDTO.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\DTOs\\UsuarioDTO.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioDTO.cs",
-              "RelativeToolTip": "organiza_emprego\\DTOs\\UsuarioDTO.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T19:32:25.64Z",
+              "Title": "cadastro.html",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\cadastro.html",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\cadastro.html",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\cadastro.html",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\cadastro.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-05-19T14:50:46.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UsuarioCadastroDto.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
-              "RelativeToolTip": "organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T20:17:03.882Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\index.html",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-05-19T14:43:57.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dashboard.js",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\js\\dashboard.js",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\dashboard.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T14:49:27.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "login.js",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\login.js",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\js\\login.js",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\login.js",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\login.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T14:47:35.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "organiza_emprego\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T20:11:31.634Z"
+              "Title": "cadastro.js",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\cadastro.js",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\js\\cadastro.js",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\cadastro.js",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\cadastro.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-05-19T14:49:05.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20260518120116_RelacionamentoUsuarioCandidatura.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
-              "RelativeToolTip": "organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
+              "DocumentIndex": 6,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "organiza_emprego\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-19T14:45:22.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "organiza_emprego.csproj",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\organiza_emprego.csproj",
+              "RelativeDocumentMoniker": "organiza_emprego\\organiza_emprego.csproj",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\organiza_emprego.csproj",
+              "RelativeToolTip": "organiza_emprego\\organiza_emprego.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T12:01:16.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "organiza_emprego\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "organiza_emprego\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T19:09:21.777Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-15T19:59:27.202Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -231,11 +222,184 @@
               "RelativeToolTip": "organiza_emprego\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-15T19:15:02.513Z"
+              "WhenOpened": "2026-05-15T19:15:02.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Program.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
+              "RelativeToolTip": "organiza_emprego\\Program.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T18:42:16.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CandidaturasController.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "RelativeToolTip": "organiza_emprego\\Controllers\\CandidaturasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:31:25.438Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "CandidaturaService.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\CandidaturaService.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Services\\CandidaturaService.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\CandidaturaService.cs",
+              "RelativeToolTip": "organiza_emprego\\Services\\CandidaturaService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T12:25:31.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ICandidaturaService.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\ICandidaturaService.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Services\\ICandidaturaService.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\ICandidaturaService.cs",
+              "RelativeToolTip": "organiza_emprego\\Services\\ICandidaturaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T12:25:02.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20260518112052_MigracaoCimatec.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
+              "RelativeToolTip": "organiza_emprego\\Migrations\\20260518112052_MigracaoCimatec.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:20:52.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Candidatura.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Candidatura.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Models\\Candidatura.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Candidatura.cs",
+              "RelativeToolTip": "organiza_emprego\\Models\\Candidatura.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:02:42.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Models\\Usuario.cs",
+              "RelativeToolTip": "organiza_emprego\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:28:47.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260517212528_TabelaUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "RelativeToolTip": "organiza_emprego\\Migrations\\20260517212528_TabelaUsuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T21:25:30.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsuarioLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "RelativeToolTip": "organiza_emprego\\DTOs\\UsuarioLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:55:59.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "organiza_emprego\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T19:32:25.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UsuarioCadastroDto.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "RelativeToolTip": "organiza_emprego\\Controllers\\UsuarioCadastroDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T20:17:03.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "organiza_emprego\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T20:11:31.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20260518120116_RelacionamentoUsuarioCandidatura.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
+              "RelativeToolTip": "organiza_emprego\\Migrations\\20260518120116_RelacionamentoUsuarioCandidatura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T12:01:16.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "organiza_emprego\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "organiza_emprego\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T19:09:21.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "20260515195632_Inicial.cs",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Migrations\\20260515195632_Inicial.cs",
               "RelativeDocumentMoniker": "organiza_emprego\\Migrations\\20260515195632_Inicial.cs",
@@ -244,18 +408,6 @@
               "ViewState": "AgIAAB8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T19:56:36.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "organiza_emprego.csproj",
-              "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\organiza_emprego.csproj",
-              "RelativeDocumentMoniker": "organiza_emprego\\organiza_emprego.csproj",
-              "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\organiza_emprego.csproj",
-              "RelativeToolTip": "organiza_emprego\\organiza_emprego.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-15T19:59:27.202Z"
             }
           ]
         }
