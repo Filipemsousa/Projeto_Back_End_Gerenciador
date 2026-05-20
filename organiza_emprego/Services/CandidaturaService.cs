@@ -44,13 +44,15 @@ namespace organiza_emprego.Services
             return candidatura;
         }
 
-        public async Task<bool> AtualizarAsync(int id, Candidatura candidatura, int usuarioId)
+        public async Task<bool> AtualizarStatusAsync(int id, string novoStatus, int usuarioId)
         {
-            var candidaturaBanco = await _context.Candidaturas.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
-            if (candidaturaBanco == null || candidaturaBanco.UsuarioId != usuarioId) return false;
+            // Usa exatamente a mesma busca que você me mandou!
+            var candidatura = await _context.Candidaturas
+                .FirstOrDefaultAsync(c => c.Id == id && c.UsuarioId == usuarioId);
 
-            candidatura.UsuarioId = usuarioId;
-            _context.Entry(candidatura).State = EntityState.Modified;
+            if (candidatura == null) return false;
+
+            candidatura.Status = novoStatus;
             await _context.SaveChangesAsync();
             return true;
         }
@@ -68,6 +70,16 @@ namespace organiza_emprego.Services
             _context.Candidaturas.RemoveRange(listaDeletar);
             await _context.SaveChangesAsync();
             return listaDeletar.Count;
+        }
+
+        public Task<bool> AtualizarStatusPorFiltroAsync(string empresa, string vaga, string? novoStatus, int usuarioId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> AtualizarStatusAsync(int id, object status, int usuarioId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

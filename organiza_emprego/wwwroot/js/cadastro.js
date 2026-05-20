@@ -1,5 +1,4 @@
-﻿const API_URL = "http://localhost:5000/api";
-
+﻿const API_URL = "/api";
 document.getElementById("form-cadastro").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -24,7 +23,7 @@ document.getElementById("form-cadastro").addEventListener("submit", async (e) =>
             alert(`Erro no cadastro: ${erroTxt}`);
         }
     } catch (error) {
-        console.error(error);
+        console.error(error.message);
         alert("Erro ao tentar conectar à API.");
     }
 });

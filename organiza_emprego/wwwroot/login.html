@@ -26,43 +26,7 @@
         </div>
     </section>
 
-    <script>
-        const API_URL = "http://localhost:5000/api";
-
-        // Se o usuário já tiver um token válido, manda ele direto para o index
-        if (localStorage.getItem("token")) {
-            window.location.href = "index.html";
-        }
-
-        document.getElementById("form-login").addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const payload = {
-                email: document.getElementById("login-email").value,
-                senha: document.getElementById("login-senha").value
-            };
-
-            try {
-                const response = await fetch(`${API_URL}/Auth/login`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(payload)
-                });
-
-                if (response.ok) {
-                    const dados = await response.json();
-                    localStorage.setItem("token", dados.token);
-                    localStorage.setItem("usuario_nome", dados.nome || "Candidato");
-
-                    // Mudança aqui: Redireciona o navegador para a página principal
-                    window.location.href = "index.html";
-                } else {
-                    alert("E-mail ou senha incorretos.");
-                }
-            } catch (error) {
-                alert("Falha na autenticação.");
-            }
-        });
-    </script>
+    <script src="js/login.js"></script>
 
 </body>
 </html>

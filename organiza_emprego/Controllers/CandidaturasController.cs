@@ -47,7 +47,7 @@ namespace organiza_emprego.Controllers
             if (id != candidatura.Id) return BadRequest("O ID informado não coincide.");
 
             int usuarioId = GetUsuarioIdLogado();
-            bool atualizou = await _candidaturaService.AtualizarAsync(id, candidatura, usuarioId);
+            bool atualizou = await _candidaturaService.AtualizarStatusAsync(id, candidatura, usuarioId);
 
             if (!atualizou) return Forbid("Operação negada ou registro inexistente.");
             return NoContent();
@@ -65,5 +65,26 @@ namespace organiza_emprego.Controllers
             if (totalDeletado == 0) return NotFound("Nenhuma candidatura correspondente foi encontrada.");
             return Ok(new { mensagem = $"{totalDeletado} candidatura(s) removida(s) com sucesso!" });
         }
+        [HttpPut("{id}")] // Rota final: PUT /api/Candidaturas/5
+        public async Task<IActionResult> AtualizarStatus([FromRoute] int id, [FromBody] AtualizarStatusRequest corpo)
+        {
+            if (corpo == null || string.IsNullOrEmpty(corpo.Status))
+                return BadRequest("O campo status é obrigatório.");
+
+            int usuarioId = GetUsuarioIdLogado();
+
+            bool atualizado = await _candidaturaService.AtualizarStatusAsync(id, corpo.Status, usuarioId);
+
+            if (!atualizado)
+                return NotFound("Candidatura não encontrada ou você não tem permissão.");
+
+            return Ok(new { mensagem = "Status atualizado com sucesso!" });
+        }
+
+        public class AtualizarStatusRequest
+        {
+            public string Status { get; set; }
+        }
+
     }
 }

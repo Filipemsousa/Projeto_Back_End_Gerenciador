@@ -1,4 +1,4 @@
-﻿const API_URL = "http://localhost:5000/api";
+﻿const API_URL = "/api";
 
 // 🔒 Guarda de Rota invertida: se já estiver logado, pula direto pro painel
 if (localStorage.getItem("token")) {
@@ -33,7 +33,7 @@ document.getElementById("form-login").addEventListener("submit", async (e) => {
             alert("E-mail ou senha incorretos.");
         }
     } catch (error) {
-        console.error(error);
+        console.error(error.message);
         alert("Não foi possível conectar ao servidor da API.");
     }
 });

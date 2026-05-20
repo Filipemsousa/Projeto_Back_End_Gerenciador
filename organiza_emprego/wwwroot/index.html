@@ -9,7 +9,7 @@
 <body>
     <main id="view-dashboard">
         <header class="main-header">
-            <h1>Astronomy & Tech Jobs</h1>
+            <h1>Organiza Emprego</h1>
             <div class="user-menu">
                 <span id="user-greeting">Olá, Usuário</span>
                 <button id="btn-logout" class="btn-danger">Sair / Logout</button>
@@ -68,84 +68,7 @@
         </div>
     </main>
 
-    <script>const API_URL = "http://localhost:5000/api";
-        const token = localStorage.getItem("token");
-        const nome = localStorage.getItem("usuario_nome");
-
-        // ⚠️ SEGURANÇA: Se não estiver logado, impede de ver o painel
-        if (!token) {
-            window.location.href = "login.html";
-        } else {
-            document.getElementById("user-greeting").innerText = `Olá, ${nome}`;
-            carregarCandidaturas();
-        }
-
-        document.getElementById("btn-logout").addEventListener("click", () => {
-            localStorage.clear();
-            window.location.href = "login.html"; // Manda de volta pro login ao deslogar
-        });
-
-        async function carregarCandidaturas() {
-            const tableBody = document.getElementById("vagas-table-body");
-            try {
-                const response = await fetch(`${API_URL}/Candidaturas`, {
-                    method: "GET",
-                    headers: { "Authorization": `Bearer ${token}` }
-                });
-
-                if (response.ok) {
-                    const candidaturas = await response.json();
-                    tableBody.innerHTML = candidaturas.length === 0
-                        ? "<tr><td colspan='5'>Nenhuma vaga cadastrada.</td></tr>"
-                        : "";
-
-                    candidaturas.forEach(c => {
-                        const dataFormatada = new Date(c.dataCandidatura).toLocaleDateString('pt-BR');
-                        tableBody.innerHTML += `
-                            <tr>
-                                <td><strong>${c.empresa}</strong></td>
-                                <td>${c.vaga}</td>
-                                <td>${dataFormatada}</td>
-                                <td>${c.status}</td>
-                                <td>${c.linkVaga ? `<a href="${c.linkVaga}" target="_blank">Acessar</a>` : 'Não informado'}</td>
-                            </tr>`;
-                    });
-                } else if (response.status === 401) {
-                    localStorage.clear();
-                    window.location.href = "login.html";
-                }
-            } catch (error) {
-                tableBody.innerHTML = "<tr><td colspan='5'>Erro ao carregar dados.</td></tr>";
-            }
-        }
-
-        document.getElementById("form-vaga").addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const payload = {
-                empresa: document.getElementById("vaga-empresa").value,
-                vaga: document.getElementById("vaga-nome").value,
-                linkVaga: document.getElementById("vaga-link").value,
-                status: document.getElementById("vaga-status").value
-            };
-
-            try {
-                const response = await fetch(`${API_URL}/Candidaturas`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${token}`
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                if (response.ok) {
-                    document.getElementById("form-vaga").reset();
-                    carregarCandidaturas();
-                }
-            } catch (error) {
-                console.error(error);
-            }
-        });</script>
+    <script src="js/dashboard.js"></script>   
 </body>
 
 

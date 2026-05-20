@@ -133,6 +133,7 @@ C:\Cursos\Ford Enter\Back_End\Projeto_backend\organiza_emprego\organiza_emprego\
 C:\Cursos\Ford Enter\Back_End\Projeto_backend\organiza_emprego\organiza_emprego\obj\Debug\net10.0\ref\organiza_emprego.dll
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\appsettings.json
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\organiza_emprego.staticwebassets.runtime.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\organiza_emprego.staticwebassets.endpoints.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\organiza_emprego.exe
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\organiza_emprego.deps.json
@@ -253,6 +254,13 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\scopedcss\bundle\organiza_emprego.styles.css
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-rg3gx0ty58-rg3gx0ty58.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-yul9n0ezia-yul9n0ezia.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\04wwgwwx8m-{0}-91kc2v7ldy-91kc2v7ldy.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-a1fltg80jj-a1fltg80jj.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3njnsgbzn2-{0}-selmt8f8h6-selmt8f8h6.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3yoogyc2ml-{0}-x9wals82la-x9wals82la.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\l6ux4uhzrw-{0}-a7r8p2276r-a7r8p2276r.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.development.json
@@ -265,11 +273,3 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\organiza_emprego.pdb
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\organiza_emprego.genruntimeconfig.cache
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\ref\organiza_emprego.dll
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\bin\Debug\net10.0\organiza_emprego.staticwebassets.runtime.json
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-yul9n0ezia-yul9n0ezia.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\04wwgwwx8m-{0}-cdea7z8650-cdea7z8650.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-v36saxmrgj-v36saxmrgj.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3njnsgbzn2-{0}-me0h2e2gz8-me0h2e2gz8.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3yoogyc2ml-{0}-m5prjvhbiq-m5prjvhbiq.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-m03vf7w8nz-m03vf7w8nz.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\l6ux4uhzrw-{0}-4ilrfri2c9-4ilrfri2c9.gz
