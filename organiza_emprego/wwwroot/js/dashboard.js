@@ -51,12 +51,20 @@ document.getElementById("form-vaga").addEventListener("submit", async (e) => {
     }
 });
 
-// Consome a rota GET protegida da API
+// 🔄 Versão definitiva: Filtro feito direto no Front-End para proteger o login e ser instantâneo!
 async function carregarCandidaturas() {
     const tableBody = document.getElementById("vagas-table-body");
+    if (!tableBody) return;
+
     tableBody.innerHTML = "<tr><td colspan='6'>Carregando candidaturas...</td></tr>";
 
+    // 1. Coleta os valores que o usuário digitou na tela para filtrar
+    const empresaInput = document.getElementById("search-empresa")?.value.toLowerCase().trim() || "";
+    const vagaInput = document.getElementById("search-vaga")?.value.toLowerCase().trim() || "";
+    const dataInput = document.getElementById("search-data")?.value || ""; // Recebe YYYY-MM-DD
+
     try {
+        // 2. Faz o GET na rota limpa padrão (Evita qualquer erro de rota/401 no C#)
         const response = await fetch(`${API_URL}/Candidaturas`, {
             method: "GET",
             headers: { "Authorization": `Bearer ${token}` }
@@ -66,12 +74,32 @@ async function carregarCandidaturas() {
             const candidaturas = await response.json();
             tableBody.innerHTML = "";
 
-            if (candidaturas.length === 0) {
-                tableBody.innerHTML = "<tr><td colspan='6'>Nenhuma candidatura registrada.</td></tr>";
+            // 3. O PULO DO GATO: Filtra a lista aqui dentro do navegador
+            const candidaturasFiltradas = candidaturas.filter(c => {
+                // Filtro de Empresa (Verifica se contém o texto digitado)
+                const bateEmpresa = c.empresa.toLowerCase().includes(empresaInput);
+
+                // Filtro de Vaga (Verifica se contém o texto digitado)
+                const bateVaga = c.vaga.toLowerCase().includes(vagaInput);
+
+                // Filtro de Data (Converte a data do banco YYYY-MM-DD... para comparar com o input)
+                let bateData = true;
+                if (dataInput) {
+                    const dataBancoFormatada = c.dataCandidatura.split("T")[0]; // Pega apenas YYYY-MM-DD do banco
+                    bateData = (dataBancoFormatada === dataInput);
+                }
+
+                return bateEmpresa && bateVaga && bateData;
+            });
+
+            // Se após filtrar não sobrar nada, mostra aviso amigável
+            if (candidaturasFiltradas.length === 0) {
+                tableBody.innerHTML = "<tr><td colspan='6' style='text-align: center; color: #777;'>Nenhuma candidatura correspondente encontrada.</td></tr>";
                 return;
             }
 
-            candidaturas.forEach(c => {
+            // 4. Renderiza apenas os registros que passaram no filtro
+            candidaturasFiltradas.forEach(c => {
                 const dataFormatada = new Date(c.dataCandidatura).toLocaleDateString('pt-BR');
                 const linkHtml = c.linkVaga ? `<a href="${c.linkVaga}" target="_blank" style="color: var(--primary); font-weight: 600;">Ver Vaga</a>` : 'Não informado';
 
@@ -79,25 +107,24 @@ async function carregarCandidaturas() {
                 const vagaEscaped = c.vaga.replace(/'/g, "\\'");
 
                 tableBody.innerHTML += `
-        <tr>
-            <td><strong>${c.empresa}</strong></td>
-            <td>${c.vaga}</td>
-            <td>${dataFormatada}</td>
-            <td>
-                <!-- 💡 Passamos o ID, o Status atual, e também a Empresa e Vaga escapadas -->
-                <span class="status-badge" style="cursor: pointer;" title="Clique para editar" 
-                      onclick="iniciarEdicaoStatus(this, ${c.id}, '${c.status}', '${empEscaped}', '${vagaEscaped}')">
-                    ${c.status} ✏️
-                </span>
-            </td>
-            <td>${linkHtml}</td>
-            <td>
-                <button onclick="excluirCandidatura('${empEscaped}', '${vagaEscaped}')" class="btn-danger" style="padding: 0.35rem 0.75rem; font-size: 0.85rem; width: auto;">
-                    Apagar
-                </button>
-            </td>
-        </tr>
-    `;
+                    <tr>
+                        <td><strong>${c.empresa}</strong></td>
+                        <td>${c.vaga}</td>
+                        <td>${dataFormatada}</td>
+                        <td>
+                            <span class="status-badge" style="cursor: pointer;" title="Clique para editar" 
+                                  onclick="iniciarEdicaoStatus(this, ${c.id}, '${c.status}', '${empEscaped}', '${vagaEscaped}')">
+                                ${c.status} ✏️
+                            </span>
+                        </td>
+                        <td>${linkHtml}</td>
+                        <td>
+                            <button onclick="excluirCandidatura('${empEscaped}', '${vagaEscaped}')" class="btn-danger" style="padding: 0.35rem 0.75rem; font-size: 0.85rem; width: auto;">
+                                Apagar
+                            </button>
+                        </td>
+                    </tr>
+                `;
             });
         } else if (response.status === 401) {
             localStorage.clear();
@@ -109,6 +136,14 @@ async function carregarCandidaturas() {
     }
 }
 
+
+// 🧼 Aproveite e adicione a função de limpar abaixo dela no seu arquivo js:
+function limparFiltros() {
+    if (document.getElementById("search-empresa")) document.getElementById("search-empresa").value = "";
+    if (document.getElementById("search-vaga")) document.getElementById("search-vaga").value = "";
+    if (document.getElementById("search-data")) document.getElementById("search-data").value = "";
+    carregarCandidaturas(); // Recarrega puxando a lista cheia novamente
+}
 // 🗑️ FUNÇÃO ATUALIZADA: Envia os filtros de Empresa e Vaga via Query String
 async function excluirCandidatura(empresa, vaga) {
     if (!confirm(`Tem certeza que deseja apagar a candidatura para "${vaga}" na empresa "${empresa}"?`)) {

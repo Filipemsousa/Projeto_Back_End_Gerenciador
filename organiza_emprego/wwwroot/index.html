@@ -66,6 +66,39 @@
                 </div>
             </section>
         </div>
+
+        <section class="= pesquisa_vagas">
+
+            <!-- 🔍 BARRA DE PESQUISA E FILTROS -->
+            <div class="search-container" style="background: #fff; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <label for="search-empresa" style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Empresa</label>
+                    <input type="text" id="search-empresa" placeholder="Buscar por empresa..." style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div style="flex: 1; min-width: 200px;">
+                    <label for="search-vaga" style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Vaga</label>
+                    <input type="text" id="search-vaga" placeholder="Buscar por vaga..." style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div style="flex: 1; min-width: 150px;">
+                    <label for="search-data" style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Data da Aplicação</label>
+                    <input type="date" id="search-data" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div style="display: flex; gap: 0.5rem;">
+                    <button onclick="carregarCandidaturas()" class="btn-primary" style="padding: 0.55rem 1.5rem; font-size: 0.9rem; width: auto; font-weight: 600; background-color: var(--primary); border: none; border-radius: 4px; color: white; cursor: pointer;">
+                        Filtrar
+                    </button>
+                    <button onclick="limparFiltros()" class="btn-secondary" style="padding: 0.55rem 1rem; font-size: 0.9rem; width: auto; background-color: #6c757d; border: none; border-radius: 4px; color: white; cursor: pointer;">
+                        Limpar
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+
     </main>
 
     <script src="js/dashboard.js"></script>   
