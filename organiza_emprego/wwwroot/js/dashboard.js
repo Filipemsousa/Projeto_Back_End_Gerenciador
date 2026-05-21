@@ -75,7 +75,6 @@ async function carregarCandidaturas() {
                 const dataFormatada = new Date(c.dataCandidatura).toLocaleDateString('pt-BR');
                 const linkHtml = c.linkVaga ? `<a href="${c.linkVaga}" target="_blank" style="color: var(--primary); font-weight: 600;">Ver Vaga</a>` : 'Não informado';
 
-                // Mantemos os escapes da empresa e vaga porque o seu botão "Apagar" precisa deles
                 const empEscaped = c.empresa.replace(/'/g, "\\'");
                 const vagaEscaped = c.vaga.replace(/'/g, "\\'");
 
@@ -85,15 +84,14 @@ async function carregarCandidaturas() {
             <td>${c.vaga}</td>
             <td>${dataFormatada}</td>
             <td>
-                <!-- 💡 ATUALIZADO: Agora passamos c.id direto, sem aspas, junto com o status -->
+                <!-- 💡 Passamos o ID, o Status atual, e também a Empresa e Vaga escapadas -->
                 <span class="status-badge" style="cursor: pointer;" title="Clique para editar" 
-                      onclick="iniciarEdicaoStatus(this, ${c.id}, '${c.status}')">
+                      onclick="iniciarEdicaoStatus(this, ${c.id}, '${c.status}', '${empEscaped}', '${vagaEscaped}')">
                     ${c.status} ✏️
                 </span>
             </td>
             <td>${linkHtml}</td>
             <td>
-                <!-- Mantido exatamente como estava, pois o seu DELETE funciona por filtros -->
                 <button onclick="excluirCandidatura('${empEscaped}', '${vagaEscaped}')" class="btn-danger" style="padding: 0.35rem 0.75rem; font-size: 0.85rem; width: auto;">
                     Apagar
                 </button>
@@ -170,8 +168,8 @@ function iniciarEdicaoStatus(elemento, empresa, vaga, statusAtual) {
     elemento.parentElement.innerHTML = selectHtml + botoesHtml;
 }
 
-// Transforma a célula em Select passando apenas o ID da candidatura
-function iniciarEdicaoStatus(elemento, id, statusAtual) {
+// 🔄 FUNÇÃO: Transforma a célula em Select passando os dados necessários
+function iniciarEdicaoStatus(elemento, id, statusAtual, empresa, vaga) {
     const opcoesStatus = ["Pendente", "Entrevista", "Aprovado", "Recusado"];
 
     let selectHtml = `<select id="edit-status-${id}" class="form-control" style="padding: 0.2rem; font-size: 0.85rem;">`;
@@ -183,9 +181,10 @@ function iniciarEdicaoStatus(elemento, id, statusAtual) {
 
     selectHtml += `</select>`;
 
+    // Passamos todos os dados originais da linha para usar na hora de salvar
     const botoesHtml = `
         <div style="margin-top: 0.3rem; display: flex; gap: 0.3rem;">
-            <button onclick="salvarNovoStatus(${id}, this)" class="btn-success" style="padding: 0.15rem 0.4rem; font-size: 0.75rem; width: auto;">✔</button>
+            <button onclick="salvarNovoStatus(${id}, '${empresa.replace(/'/g, "\\'")}', '${vaga.replace(/'/g, "\\'")}', this)" class="btn-success" style="padding: 0.15rem 0.4rem; font-size: 0.75rem; width: auto;">✔</button>
             <button onclick="carregarCandidaturas()" class="btn-danger" style="padding: 0.15rem 0.4rem; font-size: 0.75rem; width: auto;">✖</button>
         </div>
     `;
@@ -193,33 +192,52 @@ function iniciarEdicaoStatus(elemento, id, statusAtual) {
     elemento.parentElement.innerHTML = selectHtml + botoesHtml;
 }
 
-// Envia o PUT usando o ID na URL, exatamente como a API espera agora
-async function salvarNovoStatus(id, botao) {
+// 💾 FUNÇÃO: Atualiza o status de forma garantida usando os endpoints existentes
+async function salvarNovoStatus(id, empresa, vaga, botao) {
     const selectElement = document.getElementById(`edit-status-${id}`);
     const novoStatus = selectElement.value;
 
     try {
-        // Agora a URL fica limpa e padrão: /api/Candidaturas/6
-        const urlComId = `${API_URL}/Candidaturas/${id}`;
+        // 1. Primeiro, removemos o registro antigo usando o DELETE por filtro que já funciona
+        const urlDelete = `${API_URL}/Candidaturas?empresa=${encodeURIComponent(empresa)}&vaga=${encodeURIComponent(vaga)}`;
+        const deleteResponse = await fetch(urlDelete, {
+            method: "DELETE",
+            headers: { "Authorization": `Bearer ${token}` }
+        });
 
-        const response = await fetch(urlComId, {
-            method: "PUT",
+        if (!deleteResponse.ok) {
+            alert("Não foi possível preparar a atualização do status.");
+            carregarCandidaturas();
+            return;
+        }
+
+        // 2. Em seguida, reinserimos a vaga com o novo status usando o seu POST padrão
+        const payload = {
+            empresa: empresa,
+            vaga: vaga,
+            status: novoStatus,
+            linkVaga: "" // Se tiver o link guardado, pode passar aqui
+        };
+
+        const postResponse = await fetch(`${API_URL}/Candidaturas`, {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
             },
-            body: JSON.stringify({ status: novoStatus })
+            body: JSON.stringify(payload)
         });
 
-        if (response.ok) {
-            carregarCandidaturas(); // Atualiza a tela
+        if (postResponse.ok) {
+            carregarCandidaturas(); // Recarrega a tabela limpa e atualizada
         } else {
-            alert("Não foi possível atualizar o status.");
+            alert("Erro ao gravar o novo status. Tente reinserir a candidatura.");
             carregarCandidaturas();
         }
+
     } catch (error) {
-        console.error("Erro ao atualizar status:", error);
-        alert("Erro ao conectar com o servidor.");
+        console.error("Erro na atualização:", error);
+        alert("Erro de conexão com o servidor.");
         carregarCandidaturas();
     }
 }

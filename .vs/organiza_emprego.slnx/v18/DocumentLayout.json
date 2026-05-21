@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\services\\candidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\services\\candidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\controllers\\candidaturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\services\\candidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\services\\candidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\services\\icandidaturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -116,40 +116,40 @@
               "RelativeDocumentMoniker": "organiza_emprego\\Controllers\\CandidaturasController.cs",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Controllers\\CandidaturasController.cs",
               "RelativeToolTip": "organiza_emprego\\Controllers\\CandidaturasController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwDcAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwFcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T19:31:25.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CandidaturaService.cs",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\CandidaturaService.cs",
               "RelativeDocumentMoniker": "organiza_emprego\\Services\\CandidaturaService.cs",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\CandidaturaService.cs",
               "RelativeToolTip": "organiza_emprego\\Services\\CandidaturaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-19T12:25:31.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "dashboard.js",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js",
               "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\js\\dashboard.js",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js",
               "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\dashboard.js",
-              "ViewState": "AgIAANIAAAAAAAAAAAAQwOAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwGcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-05-19T14:49:27.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ICandidaturaService.cs",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Services\\ICandidaturaService.cs",
               "RelativeDocumentMoniker": "organiza_emprego\\Services\\ICandidaturaService.cs",
@@ -170,8 +170,7 @@
               "RelativeToolTip": "organiza_emprego\\wwwroot\\cadastro.html",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-19T14:50:46.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T14:50:46.095Z"
             },
             {
               "$type": "Document",
@@ -183,8 +182,7 @@
               "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\login.js",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-19T14:47:35.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T14:47:35.56Z"
             },
             {
               "$type": "Document",
@@ -220,18 +218,17 @@
               "RelativeToolTip": "organiza_emprego\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAIwFwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T20:11:31.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-17T20:11:31.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
               "RelativeDocumentMoniker": "organiza_emprego\\Program.cs",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
               "RelativeToolTip": "organiza_emprego\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAApwF8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T18:42:16.627Z",
               "EditorCaption": ""
@@ -246,8 +243,7 @@
               "RelativeToolTip": "organiza_emprego\\wwwroot\\index.html",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-19T14:43:57.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T14:43:57.633Z"
             },
             {
               "$type": "Document",
@@ -259,8 +255,7 @@
               "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\cadastro.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-05-19T14:49:05.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T14:49:05.264Z"
             },
             {
               "$type": "Document",
@@ -272,8 +267,7 @@
               "RelativeToolTip": "organiza_emprego\\wwwroot\\css\\style.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-19T14:45:22.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T14:45:22.148Z"
             },
             {
               "$type": "Document",
@@ -285,8 +279,7 @@
               "RelativeToolTip": "organiza_emprego\\wwwroot\\login.html",
               "ViewState": "AgIAABEAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-19T14:51:07.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T14:51:07.853Z"
             },
             {
               "$type": "Document",

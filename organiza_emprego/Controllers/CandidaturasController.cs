@@ -65,20 +65,52 @@ namespace organiza_emprego.Controllers
             if (totalDeletado == 0) return NotFound("Nenhuma candidatura correspondente foi encontrada.");
             return Ok(new { mensagem = $"{totalDeletado} candidatura(s) removida(s) com sucesso!" });
         }
-        [HttpPut("{id}")] // Rota final: PUT /api/Candidaturas/5
-        public async Task<IActionResult> AtualizarStatus([FromRoute] int id, [FromBody] AtualizarStatusRequest corpo)
+
+        [HttpPut("{id}")] // Rota: PUT /api/Candidaturas/34
+        public async Task<IActionResult> AktualizarStatus([FromRoute] int id, [FromBody] Dictionary<string, string> dados)
         {
-            if (corpo == null || string.IsNullOrEmpty(corpo.Status))
-                return BadRequest("O campo status é obrigatório.");
+            try
+            {
+                if (dados == null || !dados.ContainsKey("status"))
+                {
+                    return BadRequest("O campo 'status' não foi enviado corretamente.");
+                }
 
-            int usuarioId = GetUsuarioIdLogado();
+                string novoStatus = dados["status"];
 
-            bool atualizado = await _candidaturaService.AtualizarStatusAsync(id, corpo.Status, usuarioId);
+                // 🕵️‍♂️ TESTE 1: Verifica o ID do usuário
+                int usuarioId;
+                try
+                {
+                    usuarioId = GetUsuarioIdLogado();
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, $"Erro no GetUsuarioIdLogado: {ex.Message}");
+                }
 
-            if (!atualizado)
-                return NotFound("Candidatura não encontrada ou você não tem permissão.");
+                // 🕵️‍♂️ TESTE 2: Executa o Service do banco de dados
+                try
+                {
+                    bool atualizado = await _candidaturaService.AtualizarStatusAsync(id, novoStatus, usuarioId);
 
-            return Ok(new { mensagem = "Status atualizado com sucesso!" });
+                    if (!atualizado)
+                    {
+                        return NotFound("Candidatura não encontrada ou sem permissão.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Se o Entity Framework quebrar, ele vai cair aqui e te dar o motivo real (ex: coluna errada)
+                    return StatusCode(500, $"Erro interno no Service/Banco: {ex.Message} -> {ex.InnerException?.Message}");
+                }
+
+                return Ok(new { mensagem = "Status updated com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro geral não mapeado: {ex.Message}");
+            }
         }
 
         public class AtualizarStatusRequest

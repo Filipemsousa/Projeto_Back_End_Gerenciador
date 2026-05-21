@@ -122,7 +122,7 @@
   },
   {
     "ContainingType": "organiza_emprego.Controllers.CandidaturasController",
-    "Method": "AtualizarStatus",
+    "Method": "AktualizarStatus",
     "RelativePath": "api/Candidaturas/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -134,8 +134,8 @@
         "IsRequired": true
       },
       {
-        "Name": "corpo",
-        "Type": "organiza_emprego.Controllers.CandidaturasController\u002BAtualizarStatusRequest",
+        "Name": "dados",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],

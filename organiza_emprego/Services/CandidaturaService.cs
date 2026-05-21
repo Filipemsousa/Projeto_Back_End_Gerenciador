@@ -46,13 +46,21 @@ namespace organiza_emprego.Services
 
         public async Task<bool> AtualizarStatusAsync(int id, string novoStatus, int usuarioId)
         {
-            // Usa exatamente a mesma busca que você me mandou!
-            var candidatura = await _context.Candidaturas
-                .FirstOrDefaultAsync(c => c.Id == id && c.UsuarioId == usuarioId);
+            // 💡 Buscamos direto pelo ID da candidatura. Se encontrar, fazemos a checagem do dono.
+            var candidatura = await _context.Candidaturas.FirstOrDefaultAsync(c => c.Id == id);
 
-            if (candidatura == null) return false;
+            if (candidatura == null)
+                return false;
 
+            // Se o seu modelo usar "IdUsuario" em vez de "UsuarioId", altere a linha abaixo:
+            // if (candidatura.IdUsuario != usuarioId) return false;
+            if (candidatura.UsuarioId != usuarioId)
+                return false;
+
+            // Atualiza o campo exatamente com o texto vindo do front-end
             candidatura.Status = novoStatus;
+
+            // Salva de fato no banco de dados
             await _context.SaveChangesAsync();
             return true;
         }
