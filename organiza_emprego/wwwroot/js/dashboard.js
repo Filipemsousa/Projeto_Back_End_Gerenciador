@@ -51,9 +51,11 @@ document.getElementById("form-vaga").addEventListener("submit", async (e) => {
     }
 });
 
-// 🔄 Versão definitiva: Filtro feito direto no Front-End para proteger o login e ser instantâneo!
+// 🔄 Versão com Filtro no Front-End e Contador Dinâmico integrado
 async function carregarCandidaturas() {
     const tableBody = document.getElementById("vagas-table-body");
+    const contadorElemento = document.getElementById("total-candidaturas"); // 💡 Captura o contador do HTML
+
     if (!tableBody) return;
 
     tableBody.innerHTML = "<tr><td colspan='6'>Carregando candidaturas...</td></tr>";
@@ -64,7 +66,7 @@ async function carregarCandidaturas() {
     const dataInput = document.getElementById("search-data")?.value || ""; // Recebe YYYY-MM-DD
 
     try {
-        // 2. Faz o GET na rota limpa padrão (Evita qualquer erro de rota/401 no C#)
+        // 2. Faz o GET na rota limpa padrão
         const response = await fetch(`${API_URL}/Candidaturas`, {
             method: "GET",
             headers: { "Authorization": `Bearer ${token}` }
@@ -74,23 +76,24 @@ async function carregarCandidaturas() {
             const candidaturas = await response.json();
             tableBody.innerHTML = "";
 
-            // 3. O PULO DO GATO: Filtra a lista aqui dentro do navegador
+            // 3. Filtra a lista aqui dentro do navegador
             const candidaturasFiltradas = candidaturas.filter(c => {
-                // Filtro de Empresa (Verifica se contém o texto digitado)
                 const bateEmpresa = c.empresa.toLowerCase().includes(empresaInput);
-
-                // Filtro de Vaga (Verifica se contém o texto digitado)
                 const bateVaga = c.vaga.toLowerCase().includes(vagaInput);
 
-                // Filtro de Data (Converte a data do banco YYYY-MM-DD... para comparar com o input)
                 let bateData = true;
                 if (dataInput) {
-                    const dataBancoFormatada = c.dataCandidatura.split("T")[0]; // Pega apenas YYYY-MM-DD do banco
+                    const dataBancoFormatada = c.dataCandidatura.split("T")[0]; // Pega apenas YYYY-MM-DD
                     bateData = (dataBancoFormatada === dataInput);
                 }
 
                 return bateEmpresa && bateVaga && bateData;
             });
+
+            // 💡 AQUI ENTRA O CONTADOR: Atualiza o número no HTML baseado no resultado do filtro
+            if (contadorElemento) {
+                contadorElemento.innerText = candidaturasFiltradas.length;
+            }
 
             // Se após filtrar não sobrar nada, mostra aviso amigável
             if (candidaturasFiltradas.length === 0) {
@@ -133,9 +136,11 @@ async function carregarCandidaturas() {
     } catch (error) {
         console.error(error.message);
         tableBody.innerHTML = "<tr><td colspan='6'>Erro ao estabelecer conexão com a listagem.</td></tr>";
+
+        // Zera o contador se der erro de conexão
+        if (contadorElemento) contadorElemento.innerText = "0";
     }
 }
-
 
 // 🧼 Aproveite e adicione a função de limpar abaixo dela no seu arquivo js:
 function limparFiltros() {

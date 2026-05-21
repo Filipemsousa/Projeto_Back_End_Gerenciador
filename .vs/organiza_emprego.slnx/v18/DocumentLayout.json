@@ -128,7 +128,7 @@
               "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\js\\dashboard.js",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\dashboard.js",
               "RelativeToolTip": "organiza_emprego\\wwwroot\\js\\dashboard.js",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAcwE8AAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAcwI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-05-19T14:49:27.36Z",
               "EditorCaption": ""
@@ -215,8 +215,7 @@
               "RelativeToolTip": "organiza_emprego\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:42:16.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T18:42:16.627Z"
             },
             {
               "$type": "Document",
@@ -226,7 +225,7 @@
               "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\index.html",
               "RelativeToolTip": "organiza_emprego\\wwwroot\\index.html",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAGAAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAEwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-05-19T14:43:57.633Z",
               "EditorCaption": ""
