@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel - Minhas Vagas</title>
+    <!-- Importação da fonte Inter para dar o visual moderno de SaaS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <main id="view-dashboard">
+        <!-- Cabeçalho Principal -->
         <header class="main-header">
             <h1>Organiza Emprego</h1>
             <div class="user-menu">
@@ -19,26 +24,28 @@
             </div>
         </header>
 
-        <div class="dashboard-content">
-            <!-- Formulário -->
-            <section class="card form-vaga-card">
+        <!-- Grid de Conteúdo Superior: Formulário e Gráficos lado a lado -->
+        <div class="dashboard-grid">
+
+            <!-- Formulário de Cadastro -->
+            <section class="dashboard-card form-vaga-card">
                 <h3>Nova Candidatura</h3>
                 <form id="form-vaga">
                     <div class="form-group">
                         <label>Empresa</label>
-                        <input type="text" id="vaga-empresa" required>
+                        <input type="text" id="vaga-empresa" class="filter-input" required>
                     </div>
                     <div class="form-group">
                         <label>Vaga</label>
-                        <input type="text" id="vaga-nome" required>
+                        <input type="text" id="vaga-nome" class="filter-input" required>
                     </div>
                     <div class="form-group">
                         <label>Link da Vaga</label>
-                        <input type="url" id="vaga-link">
+                        <input type="url" id="vaga-link" class="filter-input">
                     </div>
                     <div class="form-group">
                         <label>Status</label>
-                        <select id="vaga-status">
+                        <select id="vaga-status" class="filter-input">
                             <option value="Aplicado">Aplicado</option>
                             <option value="Entrevista">Entrevista</option>
                             <option value="Teste Técnico">Teste Técnico</option>
@@ -50,99 +57,79 @@
                 </form>
             </section>
 
-            <!-- Tabela -->
-            <section class="card lista-vagas-card">
-                <h3>Minhas Candidaturas</h3>
-
-
-                <!-- 📊 CONTADOR DE CANDIDATURAS -->
-                <div class="vagas-contador-container" style="margin-bottom: 1rem; font-size: 1.1rem; color: #333;">
-                    <span>Total de candidaturas exibidas: <strong id="total-candidaturas" style="background-color: var(--primary, #007bff); color: white; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 1rem;">0</strong></span>
-                </div>
-
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Empresa</th>
-                                <th>Vaga</th>
-                                <th>Data</th>
-                                <th>Status</th>
-                                <th>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody id="vagas-table-body"></tbody>
-                    </table>
+            <!-- 📈 Gráfico de Rosca -->
+            <section class="dashboard-card chart-card">
+                <h3>Distribuição por Status</h3>
+                <div style="position: relative; height: 240px; width: 100%;">
+                    <canvas id="chartStatusRosca"></canvas>
                 </div>
             </section>
+
+            <!-- 📈 Gráfico de Barras -->
+            <section class="dashboard-card chart-card">
+                <h3>Volume do Processo Seletivo</h3>
+                <div style="position: relative; height: 240px; width: 100%;">
+                    <canvas id="chartStatusBarras"></canvas>
+                </div>
+            </section>
+
         </div>
 
-
-
-        <section class="= pesquisa_vagas">
-
-            <!-- 🔍 BARRA DE PESQUISA E FILTROS -->
-            <div class="search-container" style="background: #fff; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 200px;">
-                    <label for="search-empresa" style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Empresa</label>
-                    <input type="text" id="search-empresa" placeholder="Buscar por empresa..." style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+        <!-- 🔍 Seção de Filtros e Busca (Estilos movidos com sucesso para o CSS) -->
+        <section class="dashboard-card pesquisa_vagas">
+            <div class="filter-group">
+                <div class="field-wrapper">
+                    <label for="search-empresa">Empresa</label>
+                    <input type="text" id="search-empresa" class="filter-input" placeholder="Buscar por empresa...">
                 </div>
 
-                <div style="flex: 1; min-width: 200px;">
-                    <label for="search-vaga" style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Vaga</label>
-                    <input type="text" id="search-vaga" placeholder="Buscar por vaga..." style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                <div class="field-wrapper">
+                    <label for="search-vaga">Vaga</label>
+                    <input type="text" id="search-vaga" class="filter-input" placeholder="Buscar por vaga...">
                 </div>
 
-                <div style="flex: 1; min-width: 150px;">
-                    <label for="search-data" style="display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">Data da Aplicação</label>
-                    <input type="date" id="search-data" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                <div class="field-wrapper">
+                    <label for="search-data">Data da Aplicação</label>
+                    <input type="date" id="search-data" class="filter-input">
                 </div>
 
-                <div style="display: flex; gap: 0.5rem;">
-                    <button onclick="carregarCandidaturas()" class="btn-primary" style="padding: 0.55rem 1.5rem; font-size: 0.9rem; width: auto; font-weight: 600; background-color: var(--primary); border: none; border-radius: 4px; color: white; cursor: pointer;">
-                        Filtrar
-                    </button>
-                    <button onclick="limparFiltros()" class="btn-secondary" style="padding: 0.55rem 1rem; font-size: 0.9rem; width: auto; background-color: #6c757d; border: none; border-radius: 4px; color: white; cursor: pointer;">
-                        Limpar
-                    </button>
+                <div class="button-group">
+                    <button onclick="carregarCandidaturas()" class="btn-primary">Filtrar</button>
+                    <button onclick="limparFiltros()" class="btn-secondary">Limpar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabela de Candidaturas -->
+        <section class="dashboard-card lista-vagas-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h3 style="margin: 0;">Minhas Candidaturas</h3>
+
+                <!-- 📊 Contador de Candidaturas Dinâmico -->
+                <div class="vagas-contador-container" style="font-size: 0.95rem; color: var(--text-muted);">
+                    <span>Total exibido: <strong id="total-candidaturas" style="background-color: var(--primary); color: white; padding: 0.25rem 0.6rem; border-radius: 9999px; font-size: 0.85rem;">0</strong></span>
                 </div>
             </div>
 
-
-        </section>
-
-        <section>
-
-            <!-- 📈 SEÇÃO DE GRÁFICOS -->
-            <div class="dashboard-charts-container" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
-
-                <!-- Card do Gráfico de Rosca -->
-                <div class="chart-card" style="flex: 1; min-width: 300px; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="margin-top: 0; font-size: 1.1rem; color: #444;">Distribuição por Status</h3>
-                    <div style="position: relative; height: 220px; width: 100%;">
-                        <canvas id="chartStatusRosca"></canvas>
-                    </div>
-                </div>
-
-                <!-- Card do Gráfico de Barras -->
-                <div class="chart-card" style="flex: 1; min-width: 300px; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="margin-top: 0; font-size: 1.1rem; color: #444;">Volume do Processo Seletivo</h3>
-                    <div style="position: relative; height: 220px; width: 100%;">
-                        <canvas id="chartStatusBarras"></canvas>
-                    </div>
-                </div>
-
+            <!-- Container que aplica as bordas arredondadas e sombras na tabela -->
+            <div class="table-container">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th>Empresa</th>
+                            <th>Vaga</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vagas-table-body"></tbody>
+                </table>
             </div>
-
-
-
         </section>
-
 
     </main>
 
     <script src="js/dashboard.js"></script>
 </body>
-
-
 </html>

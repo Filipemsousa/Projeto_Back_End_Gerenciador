@@ -1,217 +1,276 @@
-﻿:root {
-    --primary: #4f46e5;
-    --success: #16a34a;
-    --danger: #dc2626;
-    --dark: #1e293b;
-    --bg: #f8fafc;
-    --card-bg: #ffffff;
-    --border: #e2e8f0;
+﻿/* ==========================================================================
+   📌 VARIÁVEIS DE DESIGN (Modern Tech Palette)
+   ========================================================================== */
+:root {
+    --bg-system: #f8fafc; /* Fundo ultra limpo e levemente azulado (Slate 50) */
+    --bg-card: #ffffff; /* Fundo dos cards e tabelas */
+    --text-main: #0f172a; /* Texto principal escuro, mas não preto puro (Slate 900) */
+    --text-muted: #64748b; /* Texto secundário/legendas (Slate 500) */
+    --border-color: #e2e8f0; /* Linhas e bordas finas (Slate 200) */
+    /* Cores de Ação e Status */
+    --primary: #4f46e5; /* Roxo/Azul moderno (Indigo 600) */
+    --primary-hover: #4338ca;
+    --success: #10b981; /* Verde Esmeralda */
+    --warning: #f59e0b; /* Amarelo Âmbar */
+    --danger: #ef4444; /* Vermelho Coral */
+    /* Efeitos */
+    --radius-md: 12px; /* Arredondamento padrão moderno */
+    --radius-sm: 6px;
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --transition: all 0.2s ease-in-out;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* ==========================================================================
+   🧱 ESTRUTURA GERAL DO DASHBOARD
+   ========================================================================== */
 body {
-    background-color: var(--bg);
-    color: var(--dark);
-    line-height: 1.5;
+    background-color: var(--bg-system);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 2rem;
 }
 
-/* ==========================================
-   ESTILOS DE AUTENTICAÇÃO (Login / Cadastro)
-   ========================================== */
-.auth-container {
+/* Container dos Cards de Métricas e Gráficos */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* O Card Moderno */
+.dashboard-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+    .dashboard-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px); /* Efeito sutil de flutuação */
+    }
+
+/* ==========================================================================
+   🔍 ÁREA DE FILTROS & PESQUISA (Alinhamento Vertical)
+   ========================================================================== */
+.pesquisa_vagas {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 1rem;
-}
-
-.auth-card {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    flex-direction: column; /* Força os elementos a ficarem um embaixo do outro */
+    gap: 1.25rem; /* Espaçamento confortável entre as linhas */
     width: 100%;
-    max-width: 400px;
 }
 
-    .auth-card h2 {
-        margin-bottom: 1.5rem;
-        text-align: center;
-        color: var(--primary);
+    /* Configuração dos blocos que envolvem label + input nos filtros */
+    .filter-group .field-wrapper {
+        width: 100%;
     }
 
-.auth-switch {
-    margin-top: 1.25rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #64748b;
-}
-
-    .auth-switch a {
-        color: var(--primary);
-        text-decoration: none;
+    .filter-group label {
+        display: block;
         font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-main);
     }
 
-        .auth-switch a:hover {
-            text-decoration: underline;
-        }
+/* Padronização global dos Inputs de Filtro e Formulários */
+.filter-input {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box; /* Evita que o padding quebre a largura de 100% */
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    transition: var(--transition);
+}
 
-/* ==========================================
-   FORMULÁRIOS E ENTRADAS
-   ========================================== */
+    .filter-input:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+/* Container dos botões do filtro */
+.filter-group .button-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Classes utilitárias de botões do painel */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: var(--primary-hover);
+    }
+
+.btn-secondary {
+    background-color: #64748b;
+    color: white;
+}
+
+    .btn-secondary:hover {
+        background-color: #475569;
+    }
+
+.filter-group .button-group button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+    .filter-group .button-group button:hover {
+        filter: brightness(0.95);
+    }
+
+/* ==========================================================================
+   📝 FORMULÁRIO DE NOVA CANDIDATURA (Alinhamento Vertical)
+   ========================================================================== */
+#form-vaga {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* Espaçamento idêntico ao da barra de pesquisa */
+    width: 100%;
+}
+
 .form-group {
-    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Espaço entre o texto do label e a caixa de entrada */
+    width: 100%;
 }
 
     .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 0.9rem;
+        color: var(--text-main);
     }
 
+    /* Aplica a largura total e box-sizing correto nos campos do formulário */
+    .form-group .filter-input,
     .form-group input,
     .form-group select {
         width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #cbd5e1;
-        border-radius: 6px;
-        font-size: 1rem;
-        outline: none;
-        transition: border-color 0.2s;
+        padding: 0.625rem; /* Alinhado perfeitamente com os filtros */
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-sm);
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 0.9rem;
     }
 
-        .form-group input:focus,
-        .form-group select:focus {
-            border-color: var(--primary);
-        }
-
-/* ==========================================
-   BOTÕES
-   ========================================== */
-button {
-    width: 100%;
+/* Botão de salvar candidatura */
+#form-vaga .btn-success {
+    width: 100%; /* Faz o botão ocupar toda a largura do card */
     padding: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: filter 0.2s;
-}
-
-.btn-primary {
-    background: var(--primary);
+    background-color: var(--success);
     color: white;
+    transition: var(--transition);
+    margin-top: 0.5rem;
 }
 
-.btn-success {
-    background: var(--success);
-    color: white;
-}
-
-.btn-danger {
-    background: var(--danger);
-    color: white;
-}
-
-button:hover {
-    filter: brightness(0.9);
-}
-
-/* ==========================================
-   PAINEL PRINCIPAL (Dashboard)
-   ========================================== */
-.main-header {
-    background: var(--dark);
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.user-menu {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-#btn-logout {
-    width: auto;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-}
-
-.dashboard-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .dashboard-content {
-        grid-template-columns: 350px 1fr;
-    }
-}
-
-.card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border);
-}
-
-    .card h3 {
-        margin-bottom: 1.25rem;
-        color: var(--dark);
-        border-bottom: 2px solid var(--bg);
-        padding-bottom: 0.5rem;
+    #form-vaga .btn-success:hover {
+        filter: brightness(0.9);
     }
 
-/* TABELAS */
-.table-responsive {
-    overflow-x: auto;
+/* ==========================================================================
+   📊 TABELA ULTRA CLEAN
+   ========================================================================== */
+.table-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden; /* Garante que os cantos arredondados funcionem na tabela */
+    margin-top: 1.5rem;
 }
 
-table {
-    width: 100%;
+.modern-table {
     border-collapse: collapse;
+    width: 100%;
     text-align: left;
+    font-size: 0.95rem;
 }
 
-th, td {
-    padding: 0.85rem;
-    border-bottom: 1px solid var(--border);
-}
+    .modern-table th {
+        background-color: #f8fafc;
+        color: var(--text-muted);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
 
-th {
-    background: #f1f5f9;
-    color: #475569;
-    font-weight: 600;
-}
+    .modern-table td {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-main);
+    }
 
-tr:hover {
-    background-color: #f8fafc;
-}
+    /* Efeito de linha ao passar o mouse */
+    .modern-table tbody tr:hover {
+        background-color: #f1f5f9;
+    }
 
+    /* Última linha sem borda inferior */
+    .modern-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+/* ==========================================================================
+   🏷️ BADGES DE STATUS (Estilo Pilha/Pill Moderno)
+   ========================================================================== */
 .status-badge {
-    background: #e2e8f0;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px; /* Formato de pílula completa */
+    font-size: 0.8rem;
     font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: var(--transition);
 }
+
+/* Botão de Logout */
+.btn-danger {
+    background-color: transparent;
+    color: var(--danger);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+    .btn-danger:hover {
+        background-color: #fef2f2; /* Fundo vermelho bem clarinho */
+        border-color: rgba(239, 68, 68, 0.2);
+    }
