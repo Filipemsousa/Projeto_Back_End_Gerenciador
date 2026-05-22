@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <main id="view-dashboard">
         <header class="main-header">
             <h1>Organiza Emprego</h1>
@@ -74,7 +77,7 @@
             </section>
         </div>
 
-       
+
 
         <section class="= pesquisa_vagas">
 
@@ -108,9 +111,37 @@
 
         </section>
 
+        <section>
+
+            <!-- 📈 SEÇÃO DE GRÁFICOS -->
+            <div class="dashboard-charts-container" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+
+                <!-- Card do Gráfico de Rosca -->
+                <div class="chart-card" style="flex: 1; min-width: 300px; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center;">
+                    <h3 style="margin-top: 0; font-size: 1.1rem; color: #444;">Distribuição por Status</h3>
+                    <div style="position: relative; height: 220px; width: 100%;">
+                        <canvas id="chartStatusRosca"></canvas>
+                    </div>
+                </div>
+
+                <!-- Card do Gráfico de Barras -->
+                <div class="chart-card" style="flex: 1; min-width: 300px; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center;">
+                    <h3 style="margin-top: 0; font-size: 1.1rem; color: #444;">Volume do Processo Seletivo</h3>
+                    <div style="position: relative; height: 220px; width: 100%;">
+                        <canvas id="chartStatusBarras"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
     </main>
 
-    <script src="js/dashboard.js"></script>   
+    <script src="js/dashboard.js"></script>
 </body>
 
 

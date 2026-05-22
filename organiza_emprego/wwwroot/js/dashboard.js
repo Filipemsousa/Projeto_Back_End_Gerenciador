@@ -1,4 +1,8 @@
-﻿const API_URL = "/api";
+﻿// 🌍 Variáveis Globais de Controle dos Gráficos 
+let meuGraficoRosca = null;
+let meuGraficoBarras = null;
+
+const API_URL = "/api";
 const token = localStorage.getItem("token");
 const nomeUsuario = localStorage.getItem("usuario_nome");
 
@@ -51,7 +55,7 @@ document.getElementById("form-vaga").addEventListener("submit", async (e) => {
     }
 });
 
-// 🔄 Versão com Filtro no Front-End e Contador Dinâmico integrado
+// 🔄 Versão com Filtro no Front-End, Contador Dinâmico e Gráficos integrados
 async function carregarCandidaturas() {
     const tableBody = document.getElementById("vagas-table-body");
     const contadorElemento = document.getElementById("total-candidaturas"); // 💡 Captura o contador do HTML
@@ -95,6 +99,13 @@ async function carregarCandidaturas() {
                 contadorElemento.innerText = candidaturasFiltradas.length;
             }
 
+
+           
+
+
+            // 📈 AQUI ENTRA A CHAMADA DOS GRÁFICOS: Atualiza os gráficos com os dados filtrados!
+            atualizarGraficos(candidaturasFiltradas);
+
             // Se após filtrar não sobrar nada, mostra aviso amigável
             if (candidaturasFiltradas.length === 0) {
                 tableBody.innerHTML = "<tr><td colspan='6' style='text-align: center; color: #777;'>Nenhuma candidatura correspondente encontrada.</td></tr>";
@@ -137,8 +148,10 @@ async function carregarCandidaturas() {
         console.error(error.message);
         tableBody.innerHTML = "<tr><td colspan='6'>Erro ao estabelecer conexão com a listagem.</td></tr>";
 
-        // Zera o contador se der erro de conexão
         if (contadorElemento) contadorElemento.innerText = "0";
+
+        // Zera os gráficos também caso a requisição falhe
+        atualizarGraficos([]);
     }
 }
 
@@ -279,5 +292,107 @@ async function salvarNovoStatus(id, empresa, vaga, botao) {
         console.error("Erro na atualização:", error);
         alert("Erro de conexão com o servidor.");
         carregarCandidaturas();
+    }
+}
+
+
+// 📊 Função atualizada com cores específicas por tipo de status
+function atualizarGraficos(candidaturas) {
+    // 1. Inicializa o objeto com TODOS os seus status padrões (incluindo Teste Técnico)
+    const contagemStatus = {
+        
+        "Teste técnico": 0,  // 💡 Adicionado à contagem padrão
+        "Entrevista": 0,
+        "Aprovado": 0,
+        "Recusado": 0
+    };
+
+    // Preenche as contagens agrupando por status correto
+    candidaturas.forEach(c => {
+        if (!c.status) return;
+
+        // Limpa espaços e padroniza: apenas primeira letra maiúscula (ex: "TESTE TÉCNICO" -> "Teste técnico")
+        let statusTratado = c.status.trim();
+        statusTratado = statusTratado.charAt(0).toUpperCase() + statusTratado.slice(1).toLowerCase();
+
+        if (contagemStatus[statusTratado] !== undefined) {
+            contagemStatus[statusTratado]++;
+        } else {
+            // Caso apareça algum outro status diferente no banco, ele cria dinamicamente
+            contagemStatus[statusTratado] = 1;
+        }
+    });
+
+    // 2. DEFINIÇÃO DE CORES EXATAS PARA CADA STATUS
+    // Aqui você define a cor exata para cada um de forma independente!
+    const mapaCores = {
+             
+        "Teste técnico": "#9b59b6",  // 💜 Roxo para o Teste Técnico se destacar
+        "Entrevista": "#f1c40f",     // 💛 Amarelo para Entrevista
+        "Aprovado": "#2ecc71",       // Verde
+        "Recusado": "#e74c3c"        // Vermelho
+    };
+
+    const labels = Object.keys(contagemStatus);
+    const dados = Object.values(contagemStatus);
+
+    // Gera a lista de cores seguindo EXATAMENTE a ordem das labels do gráfico
+    const coresFundo = labels.map(status => mapaCores[status] || "#95a5a6"); // Cinza como fallback se for um status desconhecido
+
+    // 3. CONFIGURAÇÃO DO GRÁFICO DE ROSCA
+    const ctxRosca = document.getElementById('chartStatusRosca')?.getContext('2d');
+    if (ctxRosca) {
+        if (meuGraficoRosca) meuGraficoRosca.destroy();
+
+        meuGraficoRosca = new Chart(ctxRosca, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: dados,
+                    backgroundColor: coresFundo,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    }
+
+    // 4. CONFIGURAÇÃO DO GRÁFICO DE BARRAS
+    const ctxBarras = document.getElementById('chartStatusBarras')?.getContext('2d');
+    if (ctxBarras) {
+        if (meuGraficoBarras) meuGraficoBarras.destroy();
+
+        meuGraficoBarras = new Chart(ctxBarras, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Quantidade',
+                    data: dados,
+                    backgroundColor: coresFundo, // Aplica as mesmas cores nas barras
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 }
+                    }
+                }
+            }
+        });
     }
 }
