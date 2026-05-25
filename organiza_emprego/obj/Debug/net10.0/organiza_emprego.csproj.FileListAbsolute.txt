@@ -254,7 +254,6 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\scopedcss\bundle\organiza_emprego.styles.css
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-a1fltg80jj-a1fltg80jj.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3njnsgbzn2-{0}-bm036klwqn-bm036klwqn.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3yoogyc2ml-{0}-x9wals82la-x9wals82la.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.build.json
@@ -270,6 +269,7 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\organiza_emprego.genruntimeconfig.cache
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\ref\organiza_emprego.dll
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\l6ux4uhzrw-{0}-fs920n4klm-fs920n4klm.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-o4lvipazzr-o4lvipazzr.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-3r9pn4d0k7-3r9pn4d0k7.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\04wwgwwx8m-{0}-78q47p5mhr-78q47p5mhr.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-jya9d0wpw6-jya9d0wpw6.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-zz4vlninqg-zz4vlninqg.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-mcj3yyqel3-mcj3yyqel3.gz
