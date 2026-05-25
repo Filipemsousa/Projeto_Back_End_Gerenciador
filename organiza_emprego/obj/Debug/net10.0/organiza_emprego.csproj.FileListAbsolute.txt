@@ -255,10 +255,10 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\scopedcss\bundle\organiza_emprego.styles.css
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-rg3gx0ty58-rg3gx0ty58.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-yul9n0ezia-yul9n0ezia.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\04wwgwwx8m-{0}-o0xgym1k1k-o0xgym1k1k.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-a1fltg80jj-a1fltg80jj.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3njnsgbzn2-{0}-bm036klwqn-bm036klwqn.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3yoogyc2ml-{0}-x9wals82la-x9wals82la.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\l6ux4uhzrw-{0}-a7r8p2276r-a7r8p2276r.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\staticwebassets.development.json
@@ -271,5 +271,5 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\organiza_emprego.pdb
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\organiza_emprego.genruntimeconfig.cache
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\ref\organiza_emprego.dll
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\04wwgwwx8m-{0}-l3biwm0q1x-l3biwm0q1x.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\3njnsgbzn2-{0}-bm036klwqn-bm036klwqn.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\l6ux4uhzrw-{0}-fs920n4klm-fs920n4klm.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-co77kqr552-co77kqr552.gz

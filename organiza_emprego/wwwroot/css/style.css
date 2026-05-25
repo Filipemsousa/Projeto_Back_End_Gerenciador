@@ -21,16 +21,59 @@
     --transition: all 0.2s ease-in-out;
 }
 
+
+
+
+
+.header-container {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;
+    padding: 20px 0; /* Dá um espaçamento ao redor */
+    width: 100%;
+}
+
+.titulo-imagem {
+    max-width: 400px; /* Ajuste este valor conforme necessário para o tamanho ideal */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
-   🧱 ESTRUTURA GERAL DO DASHBOARD
+   🖼️ IMAGEM DE FUNDO GLOBAL (APLICADA A TODAS AS PÁGINAS)
    ========================================================================== */
 body {
-    background-color: var(--bg-system);
-    color: var(--text-main);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    margin: 0;
-    padding: 2rem;
+    /* 1. Caminho da imagem: ajuste o nome e a extensão do arquivo */
+    background-image: url('https://img.freepik.com/premium-vector/grey-white-abstract-technology-background-hi-tech-digital-connect-high-technology-concept_262356-636.jpg?w=2000') !important;
+    /* 2. Garante que a imagem cubra a tela inteira sem distorcer */
+    background-size: cover !important;
+    /* 3. Centraliza a imagem na tela */
+    background-position: center !important;
+    /* 4. Impede que a imagem fique se repetindo em telas grandes */
+    background-repeat: no-repeat !important;
+    /* 5. Deixa a imagem fixa no fundo enquanto você rola a página */
+    background-attachment: fixed !important;
+    /* 6. Mantém a estrutura flex/grid que usamos para centralizar os elementos */
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
+
+
+
+
+
+
+
 
 /* Container dos Cards de Métricas e Gráficos */
 .dashboard-grid {
@@ -143,59 +186,73 @@ body {
     }
 
 /* ==========================================================================
-   📝 FORMULÁRIO DE NOVA CANDIDATURA (Alinhamento Vertical)
+   📊 CORREÇÃO DE ALINHAMENTO E RESPONSIVIDADE (DASHBOARD)
    ========================================================================== */
+
+/* 1. Garante que o card pai limite tudo o que está dentro dele */
+.dashboard-card, #card-nova-candidatura {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding: 1.5rem !important; /* Espaçamento interno controlado */
+    box-sizing: border-box !important;
+    overflow: hidden !important; /* Corta qualquer coisa que tente vazar */
+}
+
+/* 2. Corrige o container do formulário para nunca estourar a largura */
 #form-vaga {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem; /* Espaçamento idêntico ao da barra de pesquisa */
-    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important; /* Diminuído levemente para caber melhor na altura do card */
+    width: 100% !important;
+    max-width: 100% !important; /* 👈 Força o form a ficar preso dentro do card */
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem; /* Espaço entre o texto do label e a caixa de entrada */
-    width: 100%;
-}
-
-    .form-group label {
-        font-weight: 600;
-        font-size: 0.9rem;
-        color: var(--text-main);
+    /* 3. Ajusta os blocos de cada campo (Label + Input) */
+    #form-vaga .form-group,
+    #form-vaga .field-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
     }
 
-    /* Aplica a largura total e box-sizing correto nos campos do formulário */
-    .form-group .filter-input,
-    .form-group input,
-    .form-group select {
-        width: 100%;
-        padding: 0.625rem; /* Alinhado perfeitamente com os filtros */
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-sm);
-        box-sizing: border-box;
-        font-family: inherit;
-        font-size: 0.9rem;
+    /* 4. Força as caixas de digitação a ficarem perfeitas lá dentro */
+    #form-vaga input,
+    #form-vaga select,
+    #form-vaga .filter-input {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important; /* 👈 Essencial: faz o padding contar para dentro do espaço */
+        padding: 0.6rem !important;
+        border: 1px solid #b2c4d6 !important;
+        border-radius: 4px !important;
     }
 
-/* Botão de salvar candidatura */
-#form-vaga .btn-success {
-    width: 100%; /* Faz o botão ocupar toda a largura do card */
-    padding: 0.75rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border: none;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    background-color: var(--success);
-    color: white;
-    transition: var(--transition);
-    margin-top: 0.5rem;
-}
-
-    #form-vaga .btn-success:hover {
-        filter: brightness(0.9);
+    /* 5. Alinha o Botão de Salvar Candidatura */
+    #form-vaga button[type="submit"],
+    #form-vaga .btn-success {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0.7rem !important;
+        margin-top: 0.5rem !important;
+        border-radius: 9999px !important; /* Estilo pílula do LinkedIn */
+        background-color: #0a66c2 !important; /* Azul LinkedIn */
+        color: white !important;
+        font-weight: 600 !important;
+        border: none !important;
+        cursor: pointer !important;
     }
+
+        #form-vaga button[type="submit"]:hover {
+            background-color: #004182 !important;
+        }
 
 /* ==========================================================================
    📊 TABELA ULTRA CLEAN
@@ -274,3 +331,208 @@ body {
         background-color: #fef2f2; /* Fundo vermelho bem clarinho */
         border-color: rgba(239, 68, 68, 0.2);
     }
+
+
+/* ==========================================================================
+   🔑 ATUALIZAÇÃO VISUAL SEGURA (LOGIN & CADASTRO)
+   ========================================================================== */
+
+/* Muda o fundo da tela inteira para o Ciano Claro do LinkedIn */
+body {
+    background-color: #eef3f8 !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Estiliza o formulário ou o card central que você já usa */
+form, .card, .login-container {
+    background-color: #ffffff !important;
+    border: 1px solid #dce6f1 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    padding: 2.5rem 2rem !important;
+}
+
+/* Estiliza os títulos das páginas para o Azul do LinkedIn */
+h2, h1, .auth-title {
+    color: black;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+
+}
+
+/* Estiliza os campos de texto (Inputs) sem mudar os IDs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+.filter-input {
+    width: 100% !important;
+    padding: 0.65rem !important;
+    border: 1px solid #b2c4d6 !important;
+    border-radius: 4px !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* Efeito de clique azul nos inputs */
+input:focus {
+    outline: none !important;
+    border-color: #0a66c2 !important;
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.25) !important;
+}
+
+/* Transforma o botão principal no estilo arredondado do LinkedIn */
+button[type="submit"], .btn-primary {
+    width: 100% !important;
+    padding: 0.75rem !important;
+    background-color: #0a66c2 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 9999px !important; /* Formato pílula corporativo */
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+}
+
+    button[type="submit"]:hover, .btn-primary:hover {
+        background-color: #004182 !important;
+    }
+
+/* Ajusta as cores dos links (Esqueceu a senha / Cadastre-se) */
+a {
+    color: #0a66c2 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+    a:hover {
+        text-decoration: underline !important;
+    }
+
+
+/* ==========================================================================
+   🎯 CENTRALIZAÇÃO PERFEITA E FORMATO QUADRADO
+   ========================================================================== */
+
+/* 1. Prepara o fundo da tela inteira para centralizar o que estiver dentro */
+body {
+    background-color: #eef3f8 !important; /* Ciano claro LinkedIn */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important; /* Centraliza na horizontal */
+    align-items: center !important;    /* Centraliza na vertical */
+    min-height: 100vh !important;       /* Garante que o fundo ocupe toda a altura da tela */
+    box-sizing: border-box !important;
+}
+
+/* 2. Transforma o contêiner/formulário em um Quadrado Perfeito */
+form, .card, .login-container {
+    background-color: #ffffff !important;
+    border: 1px solid #dce6f1 !important;
+    border-radius: 12px !important; /* Cantos elegantemente arredondados */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important; /* Sombra mais suave e moderna */
+    
+    /* Força o elemento a ser um quadrado (Largura e Altura idênticas) */
+    width: 420px !important;
+    height: 420px !important;
+    
+    /* Distribui os elementos verticalmente de forma simétrica lá dentro */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important; 
+    
+    padding: 2.5rem !important;
+    box-sizing: border-box !important; /* Garante que o padding não quebre o tamanho do quadrado */
+}
+
+/* 3. Ajuste fino de espaçamento nos elementos internos */
+form h2, .card h2, .login-container h2 {
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Garante que as linhas de entrada de dados fiquem bem distribuídas */
+.form-group, .input-group {
+    margin-bottom: 1.2rem !important;
+    width: 100% !important;
+}
+
+
+/* ==========================================================================
+   🧼 REMOÇÃO DA BORDA INTERNA DO FORMULÁRIO
+   ========================================================================== */
+
+/* Remove o fundo branco, a borda cinza e qualquer sombra do contêiner interno */
+#form-vaga,
+#form-vaga fieldset,
+#form-vaga .form-container-interno {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ajusta o espaçamento do título para não ficar colado nos campos agora que a borda sumiu */
+.dashboard-card h2, #card-nova-candidatura h2 {
+    margin-bottom: 1.5rem !important;
+}
+
+
+
+
+/* ==========================================================================
+   🔒 FIXAÇÃO ABSOLUTA DO LAYOUT SUPERIOR (ANTI-MOVIMENTAÇÃO)
+   ========================================================================== */
+
+/* 1. Força a linha de cima a ter sempre 3 colunas de tamanhos idênticos */
+.linha-superior,
+.dashboard-grid,
+#container-cards-superiores {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 👈 3 colunas iguais cravadas, sem mexer */
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 1200px !important; /* Mantém o limite da foto */
+    margin: 0 auto 2rem auto !important; /* Espaço para a seção de filtros de baixo */
+    box-sizing: border-box !important;
+}
+
+/* 2. Garante que os cards mantenham exatamente o mesmo tamanho e comportamento visual */
+#card-nova-candidatura,
+.dashboard-card,
+#card-grafico-status,
+#card-grafico-volume {
+    background-color: #ffffff !important;
+    border: 1px solid #dce6f1 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    padding: 1.5rem !important;
+    box-sizing: border-box !important;
+    /* Impede que o card estique ou encolha sozinho */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-height: 480px !important; /* Altura fixa para todos ficarem alinhados por baixo */
+}
+
+/* 3. Isola completamente a área de filtros e tabelas para não empurrar o topo */
+.secao-filtros,
+.area-tabela,
+#container-filtros-baixo {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    clear: both !important; /* Garante que os filtros fiquem abaixo da linha dos cards */
+}
+
+/* 4. Trava o tamanho dos gráficos para não recalcularem largura sozinhos */
+.chart-container, canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 320px !important;
+    box-sizing: border-box !important;
+}
