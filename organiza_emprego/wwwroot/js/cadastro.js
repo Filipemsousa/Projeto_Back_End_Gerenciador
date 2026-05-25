@@ -1,7 +1,17 @@
 ﻿const API_URL = "/api";
+
+
 document.getElementById("form-cadastro").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    // 🛡️ ADICIONADO: Validação do Checkbox da LGPD
+    const checkboxTermos = document.getElementById("aceitar-termos");
+    if (!checkboxTermos.checked) {
+        alert("Para prosseguir com o cadastro, você deve ler e aceitar os termos da LGPD.");
+        return; // Força a parada do código e não envia nada para a API
+    }
+
+    // Seu código original continua perfeitamente intacto aqui embaixo 👇
     const payload = {
         nome: document.getElementById("cad-nome").value,
         email: document.getElementById("cad-email").value,
