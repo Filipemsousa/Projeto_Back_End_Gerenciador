@@ -1,10 +1,10 @@
-wwwroot\cadastro.html
-wwwroot\css\style.css
-wwwroot\img\titulo.png
 wwwroot\index.html
+wwwroot\img\titulo.png
+wwwroot\cadastro.html
 wwwroot\js\cadastro.js
 wwwroot\js\dashboard.js
 wwwroot\js\login.js
+wwwroot\css\style.css
 wwwroot\login.html
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\wwwroot\css\style.css
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\wwwroot\login.html

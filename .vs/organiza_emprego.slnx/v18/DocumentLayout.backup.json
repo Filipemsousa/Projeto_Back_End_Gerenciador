@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|solutionrelative:organiza_emprego\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEE00038-BC94-26FB-90B1-E83946C8DA24}|organiza_emprego\\organiza_emprego.csproj|c:\\users\\025.030174\\ford_enter\\projeto_backend\\organiza_emprego\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -106,11 +106,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "cadastro.html",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\cadastro.html",
               "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\cadastro.html",
@@ -122,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\css\\style.css",
@@ -158,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\appsettings.json",
               "RelativeDocumentMoniker": "organiza_emprego\\appsettings.json",
@@ -166,8 +166,7 @@
               "RelativeToolTip": "organiza_emprego\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-15T19:15:02.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T19:15:02.513Z"
             },
             {
               "$type": "Document",
@@ -183,15 +182,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
               "RelativeDocumentMoniker": "organiza_emprego\\Program.cs",
               "ToolTip": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\Program.cs",
               "RelativeToolTip": "organiza_emprego\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T18:42:16.627Z"
+              "WhenOpened": "2026-05-15T18:42:16.627Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -231,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "cadastro.js",
               "DocumentMoniker": "C:\\Users\\025.030174\\Ford_Enter\\Projeto_backend\\organiza_emprego\\wwwroot\\js\\cadastro.js",
               "RelativeDocumentMoniker": "organiza_emprego\\wwwroot\\js\\cadastro.js",
