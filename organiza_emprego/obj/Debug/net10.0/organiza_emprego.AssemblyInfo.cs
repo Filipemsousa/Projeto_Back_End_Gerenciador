@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a7959fe0-5248-404f-a53c-3052f45dd1e4")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("organiza_emprego")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94e4a24fb5a571876906f2828bcff6e1d1b03c81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f237bacdd6b978a6d693ab17b67615422eb9bda6")]
 [assembly: System.Reflection.AssemblyProductAttribute("organiza_emprego")]
 [assembly: System.Reflection.AssemblyTitleAttribute("organiza_emprego")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
