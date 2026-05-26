@@ -270,6 +270,6 @@ C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\ref\organiza_emprego.dll
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\l6ux4uhzrw-{0}-fs920n4klm-fs920n4klm.gz
 C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\04wwgwwx8m-{0}-78q47p5mhr-78q47p5mhr.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-jya9d0wpw6-jya9d0wpw6.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-zz4vlninqg-zz4vlninqg.gz
-C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-mcj3yyqel3-mcj3yyqel3.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\io4mcmk0ut-{0}-3pl4zf9czr-3pl4zf9czr.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\x5njdb5ku1-{0}-lo9qlu5eit-lo9qlu5eit.gz
+C:\Users\025.030174\Ford_Enter\Projeto_backend\organiza_emprego\obj\Debug\net10.0\compressed\dcazkxj02p-{0}-d38tiy4xui-d38tiy4xui.gz
