@@ -20,11 +20,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
+// CORREÇÃO 1: Removido o builder.Services.AddSwaggerGen(); duplicado que estava aqui.
 
-
-// Fazer o botão de cadeado do swagger
+// Fazer o botão de cadeado do swagger (Mantendo exatamente a sua estrutura original)
 builder.Services.AddSwaggerGen(options =>
 {
     //Permite ler comentarios XML para documentar a API no Swagger
@@ -89,8 +88,12 @@ var app = builder.Build();
 
 app.MapOpenApi();
 
+// CORREÇÃO 2: Configurando o Swagger UI com o caminho explícito para o Railway encontrar o JSON
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "organiza_emprego v1");
+});
 
 
 app.UseDefaultFiles();
@@ -100,7 +103,7 @@ app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
-app.UseCors("SuaPoliticaDeCors");
+// app.UseCors("SuaPoliticaDeCors");
 
 app.UseAuthorization();
 
